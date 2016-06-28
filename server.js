@@ -8,25 +8,27 @@ const createBundleRenderer = require('vue-server-renderer').createBundleRenderer
 const webpack = require('webpack')
 const MFS = require('memory-fs')
 
-const clientWebpackConfig = require('./webpack.client.config')
+// const clientWebpackConfig = require('./webpack.client.config')
 const serverWebpackConfig = require('./webpack.server.config')
 
-buildClientBundle()
+// buildClientBundle()
 
-function buildClientBundle () {
-  // build client bundle
-  console.log('building client bundle...')
-  webpack(clientWebpackConfig).run((err, stats) => {
-    if (err) throw err
-    if (stats.hasErrors()) {
-      stats.toJson().errors.forEach(e => {
-        console.error(e)
-      })
-      return
-    }
-    buildServerBundle()
-  })
-}
+// function buildClientBundle () {
+//   // build client bundle
+//   console.log('building client bundle...')
+//   webpack(clientWebpackConfig).run((err, stats) => {
+//     if (err) throw err
+//     if (stats.hasErrors()) {
+//       stats.toJson().errors.forEach(e => {
+//         console.error(e)
+//       })
+//       return
+//     }
+//     buildServerBundle()
+//   })
+// }
+
+buildServerBundle()
 
 function buildServerBundle () {
   // build server bundle
