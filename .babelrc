@@ -1,3 +1,7 @@
 {
-  "plugins": ["transform-vue-jsx"]
+  "plugins": [
+    "transform-vue-jsx",
+    "transform-es2015-arrow-functions",
+    "transform-es2015-block-scoping"
+  ]
 }
