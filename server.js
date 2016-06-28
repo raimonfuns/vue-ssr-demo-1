@@ -8,7 +8,7 @@ const createBundleRenderer = require('vue-server-renderer').createBundleRenderer
 const webpack = require('webpack')
 const MFS = require('memory-fs')
 
-// const clientWebpackConfig = require('./webpack.client.config')
+const clientWebpackConfig = require('./webpack.client.config')
 const serverWebpackConfig = require('./webpack.server.config')
 
 // buildClientBundle()
