@@ -4,6 +4,7 @@ Demo for Vue 2.0 server-side rendering.
 
 ``` bash
 npm install
+npm run build
 npm start
 ```
 
