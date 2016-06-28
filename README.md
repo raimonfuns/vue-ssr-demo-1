@@ -1,6 +1,6 @@
 # vue-ssr-demo
 
-Demo for Vue 2.0 server-side rendering.
+Demo for Vue 2.0 server-side rendering. [Live link](https://vue-ssr-demo-ippfcaudff.now.sh/)
 
 - Required: Node 4+
 - Recommended: Node 6+
