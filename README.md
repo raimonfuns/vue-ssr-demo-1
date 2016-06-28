@@ -2,6 +2,9 @@
 
 Demo for Vue 2.0 server-side rendering.
 
+- Required: Node 4+
+- Recommended: Node 6+
+
 ``` bash
 npm install
 npm run build
