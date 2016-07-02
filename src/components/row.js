@@ -2,10 +2,8 @@ import Column from './column'
 
 export default {
   props: ['row'],
-  server: {
-    getCacheKey: props => {
-      return props.row.id + '::' + props.row.items.length
-    }
+  serverCacheKey: props => {
+    return props.row.id + '::' + props.row.items.length
   },
   render (h) {
     return (

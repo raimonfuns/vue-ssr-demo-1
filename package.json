@@ -3,6 +3,7 @@
   "author": "Evan You",
   "license": "MIT",
   "scripts": {
+    "prestart": "npm run build",
     "start": "node server",
     "build": "webpack --config webpack.client.config.js && webpack --config webpack.server.config.js"
   },

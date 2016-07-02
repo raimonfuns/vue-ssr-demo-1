@@ -8,9 +8,7 @@ function range (n) {
 
 export default {
   props: ['item'],
-  server: {
-    getCacheKey: props => props.item.id
-  },
+  serverCacheKey: props => props.item.id,
   render (h) {
     return (
       <td class="item">
