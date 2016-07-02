@@ -12,6 +12,8 @@ const renderer = createBundleRenderer(fs.readFileSync('./dist/server-bundle.js',
   cache: require('lru-cache')({ max: 10000 })
 })
 
+const stats = []
+
 const app = express()
 
 app.use(express.static(path.resolve(__dirname, 'dist')))
@@ -39,7 +41,10 @@ app.get('*', (req, res) => {
 
   renderStream.on('end', () => {
     res.end(`<script src="/client-bundle.js"></script></body>`)
-    console.log(`request used: ' + ${(Date.now() - start)}ms`)
+    const used = Date.now() - start
+    stats.push(used)
+    console.log(`request used: ${(Date.now() - start)}ms`)
+    console.log(`average: ${(stats.reduce((s, t) => s + t, 0) / stats.length).toFixed(2)}ms`)
   })
 
   renderStream.on('error', err => {
