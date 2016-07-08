@@ -5,6 +5,7 @@ process.env.VUE_ENV = 'server'
 const fs = require('fs')
 const path = require('path')
 const express = require('express')
+const favicon = require('serve-favicon')
 const serialize = require('serialize-javascript')
 const createBundleRenderer = require('vue-server-renderer').createBundleRenderer
 
@@ -17,6 +18,7 @@ const stats = []
 const app = express()
 
 app.use(express.static(path.resolve(__dirname, 'dist')))
+app.use(favicon(path.resolve(__dirname, 'dist/logo.png')))
 
 app.get('*', (req, res) => {
   const start = Date.now()
