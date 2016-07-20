@@ -1,4 +1,4 @@
-# vue-ssr-demo
+# vue-ssr-demo-1
 
 Demo for Vue 2.0 server-side rendering. [Live link](https://vue-ssr-demo-clelqhiaxt.now.sh/)
 
